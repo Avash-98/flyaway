@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<style>
+		#navbar-container{
+			position: sticky;
+			top: 20px;
+			box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+		}
+		#flyaway-nav-signup{ background: var(--flyaway-color-medium2); }
+</style>
+</head>
+<body>
+	<header id="navbar-container" class="container px-3 my-3 rounded-5 fixed-top" 
+		style="background-color: var(--flyaway-color-dark);">
+		
+		<nav class="navbar navbar-expand-md">
+			
+			<!-- Your brand logo here -->
+			<div class="navbar-brand" style="color: var(--bs-white);">FlyAway</div>
+			
+			<!-- Toggle button: not visible on bigger screens (width>=922px) -->
+			<button class="navbar-toggler border-secondary rounded-5 px-0 collapsed" 
+				style="width: 40px; background-color: var(--bs-white); 
+				box-shadow: var(--bs-purple) 0px 0px 0px, var(--bs-purple) 0px 0px 0px 0px;" 
+				data-bs-toggle="collapse" 
+				data-bs-target="#navContent">
+					<span class="navbar-toggler-icon"></span>
+			</button>
+			
+			<!-- navbar collapsible content -->
+			<!-- Edit the elements with id="nav-item" as per your need -->
+			
+			<div class="navbar-collapse row collapse" id="navContent">
+
+				<div class="navbar-right-col d-flex">
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a href="#" 
+							class="nav-link btn" style="color: var(--bs-white);">
+								<i class="fa-solid fa-right-to-bracket"></i>
+								Login
+							</a>
+						</li>
+
+						<li class="nav-item">
+							<a href="#" 
+							id="flyaway-nav-signup"
+							class="nav-link rounded-5 btn flyaway-btn-light">
+								<i class="fa-solid fa-user"></i>
+								Sign Up
+							</a>
+						</li>
+					</ul>
+				</div>
+
+			</div>  <!-- End navbar collapsible content -->
+			
+		</nav>  <!-- End navbar -->
+	
+	</header>
+	
+</body>
+</html>

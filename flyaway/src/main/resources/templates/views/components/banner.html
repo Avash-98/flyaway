@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+	<style>
+		/* Hero Section */
+		*{
+			--flyaway-banner-height: 60vh;
+		}
+		
+		.banner{ 	
+			padding: 20px;
+			display: flex;
+			justify-content: center;
+			overflow: hidden;
+		}
+		#flyaway-banner-text-left{
+			width: 40%;
+			max-height: var(--flyaway-banner-height);
+		 	/* text-overflow: ellipsis; */
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+		#flyaway-banner-img-right{
+			height: 100%;
+			min-height: 142px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		#banner-image{
+			width: 80%;
+			height: 100%;
+		}
+	</style>
+
+</head>
+
+<body>
+	
+	<div class="p-1" style="background: var(--flyaway-linear-gradient-banner);">
+		<div>
+			<div class="container banner">
+				<div id="flyaway-banner-text-left" class="p-1">
+					<p class="display-2"><strong>FlyAway</strong></p>
+					<p>To the place your heart craves for!</p>
+				</div>
+				
+				<div id="flyaway-banner-img-right" class="mt-1">
+					<img id="banner-image" th:src="@{/img/banner-plane-image.png}"/>
+				</div>
+				
+			</div>
+		</div>
+		
+		<div class="px-5 container d-flex align-items-center justify-content-center">
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+				sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+				Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+				nisi ut aliquip ex ea commodo consequat.			
+			</p>
+		</div>
+	</div>
+
+	
+</body>
+
+</html>
