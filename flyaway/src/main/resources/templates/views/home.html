@@ -7,6 +7,8 @@ xmlns:th="http://www.thymeleaf.org">
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="icon" th:href="@{/img/flyaway-logo.png}">
 	<title>Home</title>
 
 	<!-- Bootstrap CSS -->
@@ -15,6 +17,7 @@ xmlns:th="http://www.thymeleaf.org">
 	integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" 
 	crossorigin="anonymous"/>
 
+	
 	<!-- Font Awesome CSS -->
 	<link rel="stylesheet" 
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" 
@@ -44,7 +47,6 @@ xmlns:th="http://www.thymeleaf.org">
 			padding: 10px;
 			width: 50%;
 		}
-		
 		
 		
 		/* Media Queries */
@@ -77,23 +79,56 @@ xmlns:th="http://www.thymeleaf.org">
 	
 	<div style="background: var(--flyaway-linear-gradient-middle);">
 		<div class="container page-body d-flex justify-content-center align-items-center">
-			<form class="row">
+			<form class="row" action="/user/available-flights" method="POST">
+			
 				<div class="mb-3 col-md-6">
-					<label for="source" class="form-label">Source</label>
-					<input type="text" class="form-control" id="source">
+					<label for="source" class="form-label">
+						Source
+						<span style="color: var(--flyaway-color-dark)">*</span>
+					</label>
+					<input type="text" 
+					class="form-control" 
+					id="source" 
+					name="source"
+					required />
 				</div>
+				
 				<div class="mb-3 col-md-6">
-			    	<label for="destination" class="form-label">Destination</label>
-			    	<input type="text" class="form-control" id="destination">
+			    	<label for="destination" class="form-label">
+			    		Destination
+			    		<span style="color: var(--flyaway-color-dark)">*</span>
+			    	</label>
+			    	<input type="text" 
+			    	class="form-control" 
+			    	id="destination" 
+			    	name="destination"
+			    	required />
 				</div>
+				
 				<div class="mb-3 col-md-6">
-					<label for="travel-date" class="form-label">Travel Date</label>
-					<input type="date" class="form-control" id="travel-date" aria-describedby="emailHelp">
+					<label for="travel-date" class="form-label">
+						Travel Date
+						<span style="color: var(--flyaway-color-dark)">*</span>
+					</label>
+					<input type="date" 
+					class="form-control" 
+					id="travel-date" 
+					name="travel-date"
+					required />
 				</div>
 
 				<div class="mb-3 col-md-6">
-					<label for="no-of-passengers" class="form-label">No. of passenger(s)</label>
-					<input type="text" class="form-control" id="no-of-passengers">
+					<label for="no-of-passengers" class="form-label">
+						No. of passenger(s)
+						<span style="color: var(--flyaway-color-dark)">*</span>
+					</label>
+					<input type="number"
+					class="form-control" 
+					id="no-of-passengers" 
+					name="no-of-passengers"
+					required 
+					pattern="\d*" 
+					min="1" />
 				</div>
 			
 				<div class="mb-3 col-md-12">
